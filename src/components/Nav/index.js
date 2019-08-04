@@ -1,18 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { menu } from './menu';
+import Nav from './layout';
 
-function Nav() {
-  return (
-    <div>
-      {menu.map(({ id, title, path }) => (
-        <Link to={path} key={id}>
-          {title}
-        </Link>
-      ))}
-    </div>
-  );
+function NavContainer() {
+  return <Nav menuItems={menu} />;
 }
 
-export default Nav;
+export default NavContainer;
