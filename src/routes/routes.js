@@ -1,11 +1,15 @@
+import * as paths from './paths';
+
 import { generateRouteIds } from '../utils';
-import views from '../views';
+import * as views from '../views';
 
 const routes = [
   {
-    path: '/',
+    path: paths.HOME,
     component: views.Home
   }
 ];
 
-export default routes.map(route => generateRouteIds(route));
+const routesWithIds = routes.map(route => generateRouteIds(route));
+
+export default routesWithIds;
