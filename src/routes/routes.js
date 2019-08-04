@@ -7,6 +7,10 @@ const routes = [
   {
     path: paths.HOME,
     component: views.Home
+  },
+  {
+    path: paths.CLIENTS_LIST,
+    component: views.Clients
   }
 ];
 
