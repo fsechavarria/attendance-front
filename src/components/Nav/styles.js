@@ -5,7 +5,8 @@ export const navStyles = makeStyles(theme => ({
     flexGrow: 1
   },
   navBar: {
-    background: '#00838f'
+    background:
+      'linear-gradient(to right bottom, #e29fe2, #da96df, #d28edd, #ca85db, #c17dd9, #c97ad2, #d077ca, #d675c2, #e67bb3, #ee84a6, #f2909d, #f29d98)'
   },
   title: {
     display: 'none',
