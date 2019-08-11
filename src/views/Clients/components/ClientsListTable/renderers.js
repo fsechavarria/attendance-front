@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const fooRenderer = ({ rowData }) => <div>{rowData.foo}</div>;
+import { CheckBox } from '../../../../components';
 
-export const barRenderer = ({ rowData }) => <div>{rowData.bar}</div>;
+export const checkHeaderRenderer = () => <CheckBox />;
 
-export const headerRenderer = ({ dataKey }) => <div>{dataKey} header</div>;
+export const checkRenderer = () => <CheckBox />;
