@@ -1,14 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import CssBaseLine from '@material-ui/core/CssBaseline';
+
+import { ErrorBoundary } from './components';
 
 import Routes from './routes';
 
 function App() {
   return (
-    <Fragment>
+    <ErrorBoundary>
       <CssBaseLine />
       <Routes />
-    </Fragment>
+    </ErrorBoundary>
   );
 }
 
