@@ -6,7 +6,11 @@ import ClientsListTable from './components/ClientsListTable';
 import { mockList } from './constants';
 
 function Clients() {
-  return <Paper style={{ height: '300px', width: '100%' }}>{<ClientsListTable list={mockList} />}</Paper>;
+  return (
+    <Paper style={{ height: '300px', width: '100%' }}>
+      <ClientsListTable list={mockList} />
+    </Paper>
+  );
 }
 
 export default Clients;
