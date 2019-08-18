@@ -1,13 +1,11 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
 import Table from './layout';
 
-class TableContainer extends PureComponent {
-  getRow = ({ index }) => this.props.list[index];
+const TableContainer = props => {
+  const getRow = ({ index }) => props.list[index];
 
-  render() {
-    return <Table {...this.props} getRow={this.getRow} />;
-  }
-}
+  return <Table {...props} getRow={getRow} />;
+};
 
 export default TableContainer;

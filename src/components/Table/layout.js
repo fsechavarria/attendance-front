@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Table, AutoSizer } from 'react-virtualized';
 import 'react-virtualized/styles.css';
 
@@ -52,4 +52,4 @@ function TableContainer({
   );
 }
 
-export default TableContainer;
+export default memo(TableContainer);
