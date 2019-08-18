@@ -6,10 +6,15 @@ import { Table, renderers } from '../../../../components';
 import { NAME, EMAIL, PLAN_TYPE, NEXT_BILLING_DATE, LAST_ATTENDED_CLASS, LABELS } from './constants';
 import { checkHeaderRenderer, checkRenderer } from './renderers';
 
-function ClientsListTable({ list }) {
+function ClientsListTable({ list, handleSelect, handleSelectAll }) {
   return (
     <Table list={list}>
-      <Column dataKey="checkbox" headerRenderer={checkHeaderRenderer} cellRenderer={checkRenderer} width={50} />
+      <Column
+        dataKey="checkbox"
+        headerRenderer={checkHeaderRenderer.bind(this, handleSelectAll)}
+        cellRenderer={checkRenderer.bind(this, handleSelect)}
+        width={50}
+      />
       <Column
         dataKey={NAME}
         headerRenderer={renderers.defaultHeaderRenderer}

@@ -3,12 +3,10 @@ import Paper from '@material-ui/core/Paper';
 
 import ClientsListTable from './components/ClientsListTable';
 
-import { mockList } from './constants';
-
-function Clients() {
+function Clients({ list, handleSelect, handleSelectAll }) {
   return (
     <Paper style={{ height: '300px', width: '100%' }}>
-      <ClientsListTable list={mockList} />
+      <ClientsListTable list={list} handleSelect={handleSelect} handleSelectAll={handleSelectAll} />
     </Paper>
   );
 }
